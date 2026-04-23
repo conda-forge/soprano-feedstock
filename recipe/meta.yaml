@@ -10,7 +10,7 @@ source:
   sha256: e1d8ab62c4d410ab1052021d7ae645296fec2bb8d63938014584c6aa7038961b
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
     - vasp2cell = soprano.scripts.vasp2cell:__main__
@@ -20,15 +20,17 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - numpy
     - scipy
     - ase
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - soprano
     - soprano.analyse
