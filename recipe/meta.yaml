@@ -1,5 +1,5 @@
 {% set name = "Soprano" %}
-{% set version = "0.8.13b" %}
+{% set version = "0.9.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/CCP-NC/soprano/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: e1d8ab62c4d410ab1052021d7ae645296fec2bb8d63938014584c6aa7038961b
+  sha256: 87fefd22d27753d0d0c87685bd6083c10245a690f8c89723ffbf1ef24af740da
 build:
   noarch: python
   number: 0
